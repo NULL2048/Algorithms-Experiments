@@ -4,6 +4,7 @@ public class Factorization {
     public static int[] a = new int[50];
     public static int index = 0;
     public static int num;
+    public static int cnt = 0;
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -11,6 +12,8 @@ public class Factorization {
         int n = scan.nextInt();
         num = n;
         resolve(n);
+
+        System.out.println("分解因式个数：" + cnt);
     }
 
     public static void resolve(int n) {
@@ -26,6 +29,7 @@ public class Factorization {
                 }
                 System.out.println();
                 index--;
+                cnt++;
                 return;
             }
             if (n % i == 0) {
