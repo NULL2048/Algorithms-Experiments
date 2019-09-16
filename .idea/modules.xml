@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/二分法递归/二分法递归.iml" filepath="$PROJECT_DIR$/二分法递归/二分法递归.iml" />
+      <module fileurl="file://$PROJECT_DIR$/全排列算法/全排列算法.iml" filepath="$PROJECT_DIR$/全排列算法/全排列算法.iml" />
+      <module fileurl="file://$PROJECT_DIR$/汉诺塔/汉诺塔.iml" filepath="$PROJECT_DIR$/汉诺塔/汉诺塔.iml" />
+      <module fileurl="file://$PROJECT_DIR$/跳台阶问题/跳台阶问题.iml" filepath="$PROJECT_DIR$/跳台阶问题/跳台阶问题.iml" />
+    </modules>
+  </component>
+</project>
