@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
 public class MergeSort {
-    private static final int max = 500000; // 输入数据量的最大值
-    private static final int sentinel = 999999999; // 这是插在数组最右端的一个极大数，必须保证比前面所有的数据都要大
-    private static int[] l = new int[max / 2 + 2]; // 将拆分的数字分成左右两半
-    private static int[] r = new int[max / 2 + 2];
+    private static final int MAX = 500000; // 输入数据量的最大值
+    private static final int SENTINEL = 999999999; // 这是插在数组最右端的一个极大数，必须保证比前面所有的数据都要大
+    private static int[] l = new int[MAX / 2 + 2]; // 将拆分的数字分成左右两半
+    private static int[] r = new int[MAX / 2 + 2];
     private static int cnt = 1;
 
     public static void main(String[] args) {
-        int[] num = new int[max];
+        int[] num = new int[MAX];
         int n = 0;
 
         System.out.print("请输入数据个数：");
@@ -69,7 +69,7 @@ public class MergeSort {
             r[i] = num[mid + i];
         }
 
-        l[n1] = r[n2] = sentinel; // 设置极大标记
+        l[n1] = r[n2] = SENTINEL; // 设置极大标记
 
         int i = 0;
         int t = 0;
