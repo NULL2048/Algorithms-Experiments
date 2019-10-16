@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/NextDay/NextDay.iml" filepath="$PROJECT_DIR$/NextDay/NextDay.iml" />
       <module fileurl="file://$PROJECT_DIR$/二分法递归/二分法递归.iml" filepath="$PROJECT_DIR$/二分法递归/二分法递归.iml" />
       <module fileurl="file://$PROJECT_DIR$/全排列算法/全排列算法.iml" filepath="$PROJECT_DIR$/全排列算法/全排列算法.iml" />
+      <module fileurl="file://$PROJECT_DIR$/字典序排序/字典序排序.iml" filepath="$PROJECT_DIR$/字典序排序/字典序排序.iml" />
       <module fileurl="file://$PROJECT_DIR$/归并排序/归并排序.iml" filepath="$PROJECT_DIR$/归并排序/归并排序.iml" />
       <module fileurl="file://$PROJECT_DIR$/快速排序/快速排序.iml" filepath="$PROJECT_DIR$/快速排序/快速排序.iml" />
       <module fileurl="file://$PROJECT_DIR$/整数划分/整数划分.iml" filepath="$PROJECT_DIR$/整数划分/整数划分.iml" />
