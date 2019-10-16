@@ -25,7 +25,7 @@ public class Hamilton {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
+        // 输入必须是偶数，偶数才有可能把所有的位置走一遍，奇数的棋盘是走不了的
         System.out.println("请输入棋盘的大小（m*n）：");
         m = scan.nextInt();
         n = scan.nextInt();
@@ -33,8 +33,8 @@ public class Hamilton {
 
         dx[1] = 0;
         dy[1] = 0;
+        count[0][0] = 1;
         move(0, 0, 1);
-
     }
 
     /**
@@ -44,19 +44,23 @@ public class Hamilton {
      * @param cnt 当前走的步数
      */
     public static void move(int x, int y, int cnt) {
+        // 已经走了m*n次说明已经走完了
         if (cnt == m * n && isOrigin(x, y)) {
             output(cnt);
+            // 输出一种情况就可以了，直接结束程序就好了，就不要再往下算了，因为可能有很多情况
             System.exit(0);
         }
 
         for (int i = 0; i < 8; i++) {
             int nextX = x + px[i];
             int nextY = y + py[i];
+            // 先判断是不是出界，再判断这个位置有没有被走过
             if (!isOut(nextX, nextY) && count[nextX][nextY] == 0) {
                 count[nextX][nextY] = cnt + 1;
                 dx[cnt + 1] = nextX;
                 dy[cnt + 1] = nextY;
                 move(nextX, nextY, cnt + 1);
+                // 上一层返回到这里需要再把数据清空，再去尝试另一种情况
                 count[nextX][nextY] = 0;
             }
         }
