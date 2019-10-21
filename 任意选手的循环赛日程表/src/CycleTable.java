@@ -105,8 +105,8 @@ public class CycleTable {
                 arr[i + m][j + m] = arr[i][j];
             }
         }
-        System.out.println("B");
-        output(10);
+//        System.out.println("B");
+//        output(10);
     }
 
     /**
@@ -135,8 +135,8 @@ public class CycleTable {
                     arr[m + i][j] = arr[i][j] + m;
                 }
             }
-            System.out.println("A");
-            output(10);
+//            System.out.println("A");
+//            output(10);
             // 因为是奇数所以添加一个虚拟选手
             for (int j = 2; j <= m; j++) {
                 // 右上角

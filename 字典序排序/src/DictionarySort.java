@@ -18,7 +18,7 @@ public class DictionarySort {
         Scanner scan = new Scanner(System.in);
         System.out.println("请输入要排列的数字位数：");
         int n = scan.nextInt();
-
+        // 存储要进行字典序排序的数字
         int[] a = new int[n];
         b = new int[n];
         c = new int[n];

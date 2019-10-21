@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NextDay/NextDay.iml" filepath="$PROJECT_DIR$/NextDay/NextDay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MatrixMultiplication/MatrixMultiplication.iml" filepath="$PROJECT_DIR$/MatrixMultiplication/MatrixMultiplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/二分法递归/二分法递归.iml" filepath="$PROJECT_DIR$/二分法递归/二分法递归.iml" />
       <module fileurl="file://$PROJECT_DIR$/任意选手的循环赛日程表/任意选手的循环赛日程表.iml" filepath="$PROJECT_DIR$/任意选手的循环赛日程表/任意选手的循环赛日程表.iml" />
       <module fileurl="file://$PROJECT_DIR$/全排列算法/全排列算法.iml" filepath="$PROJECT_DIR$/全排列算法/全排列算法.iml" />
@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/整数因子分解/整数因子分解.iml" filepath="$PROJECT_DIR$/整数因子分解/整数因子分解.iml" />
       <module fileurl="file://$PROJECT_DIR$/棋盘覆盖/棋盘覆盖.iml" filepath="$PROJECT_DIR$/棋盘覆盖/棋盘覆盖.iml" />
       <module fileurl="file://$PROJECT_DIR$/汉诺塔/汉诺塔.iml" filepath="$PROJECT_DIR$/汉诺塔/汉诺塔.iml" />
+      <module fileurl="file://$PROJECT_DIR$/矩阵连乘问题/矩阵连乘问题.iml" filepath="$PROJECT_DIR$/矩阵连乘问题/矩阵连乘问题.iml" />
       <module fileurl="file://$PROJECT_DIR$/跳台阶问题/跳台阶问题.iml" filepath="$PROJECT_DIR$/跳台阶问题/跳台阶问题.iml" />
       <module fileurl="file://$PROJECT_DIR$/马的Hamilton周游路线问题/马的Hamilton周游路线问题.iml" filepath="$PROJECT_DIR$/马的Hamilton周游路线问题/马的Hamilton周游路线问题.iml" />
     </modules>
