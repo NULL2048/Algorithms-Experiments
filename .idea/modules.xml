@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/NextDay/NextDay.iml" filepath="$PROJECT_DIR$/NextDay/NextDay.iml" />
       <module fileurl="file://$PROJECT_DIR$/二分法递归/二分法递归.iml" filepath="$PROJECT_DIR$/二分法递归/二分法递归.iml" />
+      <module fileurl="file://$PROJECT_DIR$/任意选手的循环赛日程表/任意选手的循环赛日程表.iml" filepath="$PROJECT_DIR$/任意选手的循环赛日程表/任意选手的循环赛日程表.iml" />
       <module fileurl="file://$PROJECT_DIR$/全排列算法/全排列算法.iml" filepath="$PROJECT_DIR$/全排列算法/全排列算法.iml" />
       <module fileurl="file://$PROJECT_DIR$/半数集问题/半数集问题.iml" filepath="$PROJECT_DIR$/半数集问题/半数集问题.iml" />
       <module fileurl="file://$PROJECT_DIR$/字典序排序/字典序排序.iml" filepath="$PROJECT_DIR$/字典序排序/字典序排序.iml" />
