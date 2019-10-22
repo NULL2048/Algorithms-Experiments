@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MatrixMultiplication/MatrixMultiplication.iml" filepath="$PROJECT_DIR$/MatrixMultiplication/MatrixMultiplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/二分法递归/二分法递归.iml" filepath="$PROJECT_DIR$/二分法递归/二分法递归.iml" />
       <module fileurl="file://$PROJECT_DIR$/任意选手的循环赛日程表/任意选手的循环赛日程表.iml" filepath="$PROJECT_DIR$/任意选手的循环赛日程表/任意选手的循环赛日程表.iml" />
       <module fileurl="file://$PROJECT_DIR$/全排列算法/全排列算法.iml" filepath="$PROJECT_DIR$/全排列算法/全排列算法.iml" />
