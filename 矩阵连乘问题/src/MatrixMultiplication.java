@@ -1,13 +1,23 @@
 import java.util.Scanner;
-// 最终版本
+
 public class MatrixMultiplication {
-    public static int N = 7;
+    public static int N;
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int[] p = {30, 35, 15, 5, 10, 20, 25};
+        //int[] p = {30, 35, 15, 5, 10, 20, 25};
+
+        System.out.println("请输入矩阵连乘的个数：");
+        int n = scan.nextInt();
+        int[] p = new int[n + 5];
+
+        System.out.println("请输入矩阵链：");
+        for (int i = 0; i <= n; i++) {
+            p[i] = scan.nextInt();
+        }
+
+        N = n + 1;
         int[][] m = new int[N][N];
         int[][] s = new int[N][N];
-
         matrixChain(p, m, s, N);
         output(s, 1, N - 1);
     }
