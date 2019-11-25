@@ -1,5 +1,6 @@
 import java.util.Scanner;
-
+// 1A2C3D4B56
+// B1D23CA45B6A
 public class LongestCommonSuborder {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -88,7 +89,7 @@ public class LongestCommonSuborder {
             LCS(i - 1, j, x, b);
             // 原理同上
         } else {
-            LCS(i, j -1, x, b);
+            LCS(i, j - 1, x, b);
         }
     }
 }

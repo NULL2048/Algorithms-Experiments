@@ -5,6 +5,7 @@ public class MatrixMultiplication {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         //int[] p = {30, 35, 15, 5, 10, 20, 25};
+        // 6
 
         System.out.println("请输入矩阵连乘的个数：");
         int n = scan.nextInt();
