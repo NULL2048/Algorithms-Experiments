@@ -80,6 +80,7 @@ public class OptimalBinarySearchTree {
             System.out.printf("d%d是K%d的左孩子\n", i - 1, i);
             System.out.printf("d%d是K%d的右孩子\n", i, i);
         }
+
         if (i > j) {
             System.out.printf("d%d是K%d的右孩子\n", j, j);
         }
