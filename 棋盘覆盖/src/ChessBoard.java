@@ -17,6 +17,7 @@ public class ChessBoard {
         System.out.println("请输入特殊方块的位置：");
         int x = scan.nextInt();
         int y = scan.nextInt();
+        // 就是输入棋盘的一边有多少个格子就行
         System.out.println("请输入棋盘大小");
         int size = scan.nextInt();
 
@@ -47,6 +48,14 @@ public class ChessBoard {
      * @param size 棋盘尺寸
      */
     public static void chessBoard(int tr, int tc, int dr, int dc, int size) {
+        for (int i = 0; i < 4; i++) {
+            for (int t = 0; t < 4; t++) {
+                System.out.print(board[i][t] + " \t");
+            }
+            System.out.println("");
+        }
+        System.out.println("\n");
+
         // 当棋盘尺寸分解成1的时候，说明可以开始返回合并了
         if (size == 1) {
             return;
@@ -58,7 +67,7 @@ public class ChessBoard {
         if (dr < tr + s && dc < tc + s) { // 特殊方块在左上角区域
             chessBoard(tr, tc, dr, dc, s);
         } else { // 特殊方块不在左上角，就将左上角区域的与其他三个区域的汇合处设为左上角区域的特殊方块
-            // 将连接处方块标记为特殊方块
+            // 将连接处方块标记为特殊方块  主要就是要理解求这些坐标的原则
             board[tr + s - 1][tc + s - 1] = t;
             // 进入下一层，继续对其进行分解，使用新的方块左上角行列号和新的特殊方块位置，新的尺寸大小
             chessBoard(tr, tc, tr + s - 1, tc + s - 1, s);

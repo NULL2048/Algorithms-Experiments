@@ -12,7 +12,7 @@ public class Division {
         }
         System.out.println("请输入要查找的数：");
         int target = scan.nextInt();
-        System.out.println("搜素的数的下标为：");
+        System.out.println("搜索的数的下标为：");
         System.out.println(binarySearchRecursive(0, n, target));
     }
 

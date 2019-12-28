@@ -5,7 +5,7 @@ public class MergeSort {
     private static final int SENTINEL = 999999999; // 这是插在数组最右端的一个极大数，必须保证比前面所有的数据都要大
     private static int[] l = new int[MAX / 2 + 2]; // 将拆分的数字分成左右两半
     private static int[] r = new int[MAX / 2 + 2];
-    private static int cnt = 1;
+    private static int cnt = 1; // 记录第几次排序
 
     public static void main(String[] args) {
         int[] num = new int[MAX];
@@ -30,17 +30,20 @@ public class MergeSort {
 
     /**
      * 递归驱动
-     * 这个方法是用来分隔数据规模的
+     * 这个方法是用来分割数据规模的，即用分治思想缩小数据规模
      * @param num
      * @param n num数组中一共有n个数
      * @param left 表示分隔的左数组的左边界
      * @param right 表示分隔的右数组的右边界
      *
-     * 这个的思路就是从最开始总的数组，采用分治的思想把他们给拆分，一层层向下拆分，知道拆分成只有一个小块的时候，然后再比较两个数的大小，进行大小排序
+     * 这个的思路就是从最开始总的数组，采用分治的思想把他们给拆分，一层层向下拆分，指导拆分成只有一个小块的时候，然后再比较两个数的大小，进行大小排序
      * 把大规模的数据，分成小规模的数据，对小规模的数据进行比较排序，然后一层层向上返，这就是归并排序的核心思想
      */
     public static void mergeSort(int[] num, int n, int left, int right) {
-        if (left + 1 < right) { // 当left和right重合之后就说明已经排序完了，可以向上返回了
+        // 这个递归出口就是当分割到只剩才左右两个相邻的数了，就不需要继续递归分割下去了，直接返回就行了
+        // left所代表的书如果就紧挨着right所代表的书，即left+1==right，就是上面说的这种情况，直接递归返回就行了
+        // 因为再分下去没有意义，直接将最小规模的之一段数（2个数）传入排序方法merge排序就可以了，没有必要再向下递归分割一次
+        if (left + 1 < right) {
             int mid = (left + right) / 2; // 每一次分隔就是从中间进行分割
             // 下面继续调用mergeSort进行分割
             mergeSort(num, n, left, mid);
