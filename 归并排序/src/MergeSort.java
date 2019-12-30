@@ -74,9 +74,11 @@ public class MergeSort {
 
         l[n1] = r[n2] = SENTINEL; // 设置极大标记
 
+        // 标记l数组当前遍历的位置
         int i = 0;
+        // 标记r数组当前遍历的位置
         int t = 0;
-        // 开始进行比较运算，只是在当前分隔区间进行重新划分排序
+        // 开始进行比较运算，只是在当前分隔区间进行重新划分排序，就是两个数组l,r中谁小就先放入num数组中
         for (int j = left; j < right; j++) {
             if (l[i] <= r[t]) {
                 num[j] = l[i++];

@@ -89,7 +89,7 @@ public class CycleTable {
     }
 
     /**
-     * 对偶数选手数进行数字块的拷贝
+     * 对偶数选手数进行数字块的拷贝  拷贝规则就直接看下面的操作就可以了
      * @param n 对n个数字块进行拷贝
      */
     public static void copy(int n) {
@@ -97,7 +97,7 @@ public class CycleTable {
         // 将分割的方块进行数字拷贝
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= m; j++) {
-                // 将左上角已经有的数字加m赋值给右上角方块
+                // 将左上角方块已经有的数字加m赋值给右上角方块中对应位置的方块
                 arr[i][j + m] = arr[i][j] + m;
                 // 将右上角已经有的数字赋值给左下角方块
                 arr[i + m][j] = arr[i][j + m];

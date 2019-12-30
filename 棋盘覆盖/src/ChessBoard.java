@@ -65,6 +65,7 @@ public class ChessBoard {
         int s = size / 2;
         // 下面是判断特殊方块是在哪一个区域
         if (dr < tr + s && dc < tc + s) { // 特殊方块在左上角区域
+            // 继续对左上角方块分割
             chessBoard(tr, tc, dr, dc, s);
         } else { // 特殊方块不在左上角，就将左上角区域的与其他三个区域的汇合处设为左上角区域的特殊方块
             // 将连接处方块标记为特殊方块  主要就是要理解求这些坐标的原则
@@ -72,6 +73,7 @@ public class ChessBoard {
             // 进入下一层，继续对其进行分解，使用新的方块左上角行列号和新的特殊方块位置，新的尺寸大小
             chessBoard(tr, tc, tr + s - 1, tc + s - 1, s);
         }
+        // else中chessBoard前两个参数和if的chessBoard的前两个参数一样，else的chessBoard的后两个参数就是board[tr + s - 1][tc + s - 1] = t这个数组的位置，前两个是左上角坐标，后两个是特殊方块坐标
         // 原理同上，这个是判断特殊方块在不在右上角区域
         if (dr < tr + s && dc >= tc + s) {
             chessBoard(tr, tc + s, dr, dc, s);

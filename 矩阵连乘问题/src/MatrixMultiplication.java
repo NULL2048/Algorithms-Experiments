@@ -4,7 +4,7 @@ public class MatrixMultiplication {
     public static int N;
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        //int[] p = {30, 35, 15, 5, 10, 20, 25};
+        // int[] p = {30, 35, 15, 5, 10, 20, 25};
         // 6
 
         System.out.println("请输入矩阵连乘的个数：");
@@ -55,7 +55,7 @@ public class MatrixMultiplication {
 
     /**
      * 自底向上计算
-     * @param p p为矩阵链 p[0],p[1]代表第一个矩阵的行数和列数，p[1].p[2]代表第二个矩阵的行数和列数
+     * @param p p为矩阵链 p[0],p[1]代表第一个矩阵的行数和列数，p[1],p[2]代表第二个矩阵的行数和列数，矩阵只有一个矩阵的行数和另一个矩阵的列数相同，才可以相乘
      * @param m 存储最优结果（矩阵相乘计算次数最少的次数）的二维矩阵  m[i][j]表示从第i个矩阵乘到第j个矩阵计算的最少次数
      * @param s 存储选择最优结果路线，s[i][j]表示从第i个矩阵乘到第j个矩阵计算求得的最少次数是在i-j间使用哪个分割点k得到的。用来得到最优解的括号分割位置
      * @param length p数组的长度  如果是6个矩阵，那么length=7
@@ -64,7 +64,7 @@ public class MatrixMultiplication {
         // n表示n个矩阵
         int n = length - 1;
         // m[i][i]只有一个矩阵，一个矩阵的相乘次数为0，即m[i][i]=0
-        for (int i = 1; i < length; i++) {
+        for (int i = 1; i <= n; i++) {
             m[i][i] = 0;
         }
 
@@ -95,7 +95,7 @@ public class MatrixMultiplication {
             }
         }
         // 输出整个矩阵链连乘的最少计算次数
-        System.out.println(m[1][N - 1]);
+        System.out.println(m[1][n]);
     }
 
     /**
@@ -105,7 +105,7 @@ public class MatrixMultiplication {
      * @param j 要进行分割区间的右边界
      */
     public static void output(int[][] s, int i, int j) {
-        // i==j表明分割已经结束了，可以输出矩阵标号了，这就是递归出口
+        // i==j表明分割已经结束了，即到达了分割点的位置，可以输出矩阵标号了，这就是递归出口
         if(i == j) {
             System.out.print("A" + i);
         } else {

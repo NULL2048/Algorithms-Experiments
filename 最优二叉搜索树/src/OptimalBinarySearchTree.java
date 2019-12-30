@@ -13,11 +13,11 @@ public class OptimalBinarySearchTree {
     // 结点个数
     private static int n = 5;
     // 对第i个关键字搜索到的概率为p  关键字是在二叉搜索树中的值
-    private static double[] p={0,0.15,0.10,0.05,0.10,0.20};
-    // 对第i个虚拟键搜索到的概率为p  虚拟键是不在二叉搜索树中的值
-    private static double[] q={0.05 ,0.10 ,0.05 ,0.05 ,0.05 ,0.10};
+    private static double[] p = {0, 0.15, 0.10, 0.05, 0.10, 0.20};
+    // 对第i个虚拟键搜索到的概率为p  虚拟键是不在二叉搜索树中的值，也就是自己假定的一个虚拟结点，找到虚拟节点就说明二叉树中不存在要搜索的值
+    private static double[] q = {0.05, 0.10, 0.05, 0.05, 0.05, 0.10};
     // 记录子树期望代价
-    private static double[][] e = new double [100][100];
+    private static double[][] m = new double[100][100];
     // 子树概率总和
     private static double[][] w = new double[100][100];
     // 记录根结点
@@ -33,31 +33,37 @@ public class OptimalBinarySearchTree {
         // 初始化只包括虚拟键的子树
         for (int i = 1; i <= n + 1; i++) {
             w[i][i - 1] = q[i - 1];
-            e[i][i - 1] = q[i - 1];
+            m[i][i - 1] = q[i - 1];
         }
 
         // 自底向上，由左到右逐步计算
+        // i表示当前的树是几个结点
         for (int i = 1; i <= n; i++) {
+            // j表示的是当前这个树的节点范围的左边界的结点
             for (int j = 1; j <= n - i + 1; j++) {
+                // k表示的是当前这个树的节点范围的右边界的结点
                 int k = i + j - 1;
-                e[j][k] = MAX;
+                m[j][k] = MAX;
+                // 画一个1结点的树，和1，2结点的树，就能看出来，看63页PPT
+                // 把上面假设的数带入j和k
                 w[j][k] = w[j][k - 1] + p[k] + q[k];
                 // 求取最小代价的子树的根
                 for (int l = j; l <= k; l++) {
-                    double temp = e[j][l - 1] + e[l + 1][k] + w[j][k];
-                    if (temp < e[j][k]) {
-                        e[j][k] = temp;
+                    double temp = m[j][l - 1] + m[l + 1][k] + w[j][k];
+                    if (temp < m[j][k]) {
+                        m[j][k] = temp;
                         root[j][k] = l;
                     }
                 }
             }
         }
-        return e[1][n];
+        return m[1][n];
     }
 
     /**
      * 输出最优二叉树的结构
      * 打印出[i,j]子树，它是根r的左子树和右子树
+     *
      * @param i
      * @param j
      */
@@ -67,13 +73,13 @@ public class OptimalBinarySearchTree {
         }
         if (i < j) {
             System.out.printf("K%d是K%d的左孩子\n", root[i][root[i][j] - 1], root[i][j]);
-            outputOBST(i,root[i][j] - 1);
+            outputOBST(i, root[i][j] - 1);
 
-            if(root[i][j]+1 < j) {
+            if (root[i][j] + 1 < j) {
                 System.out.printf("K%d是K%d的右孩子\n", root[root[i][j] + 1][j], root[i][j]);
             }
 
-            outputOBST(root[i][j] + 1,j);
+            outputOBST(root[i][j] + 1, j);
         }
 
         if (i == j) {
